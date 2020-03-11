@@ -21,13 +21,13 @@ describe( "index.js", () => {
         .to.have.been.called.with( 'https://anapioficeandfire.com/api/books' );
     } )
 
-    // it( "renders book titles into the DOM by passing a JSON object to renderBooks()", async () => {
-    //   chai.spy.on( window, 'renderBooks' );
-    //   await fetchBooks()
+    it( "renders book titles into the DOM by passing a JSON object to renderBooks()", async () => {
+      chai.spy.on( window, 'renderBooks' );
+      await fetchBooks()
       
-    //   .then(() => {
-    //     expect( window.renderBooks ).to.have.been.called();
-    //   })
-    // } )
+      .then(() => {
+        expect( window.renderBooks ).to.have.been.called();
+      })
+    } )
   } )
 })
